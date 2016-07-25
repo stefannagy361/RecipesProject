@@ -50,18 +50,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controlers\AutentificatorService.cs" />
     <Compile Include="Controlers\DataAcces.cs" />
+    <Compile Include="Controlers\FridgeService.cs" />
+    <Compile Include="Controlers\IngredientServices.cs" />
+    <Compile Include="Controlers\RecipeService.cs" />
+    <Compile Include="Controlers\UserServices.cs" />
     <Compile Include="Migrations\201607250757254_v1.0.0.cs" />
     <Compile Include="Migrations\201607250757254_v1.0.0.Designer.cs">
       <DependentUpon>201607250757254_v1.0.0.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Fridge.cs" />
-    <Compile Include="Models\Ingredient.cs" />
-    <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecipesProjectContext.cs" />
+    <Compile Include="Views\LoggedUserMenu.cs" />
     <Compile Include="Views\UserMenu.cs" />
     <Compile Include="Views\MenuView.cs" />
   </ItemGroup>
@@ -69,11 +72,16 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201607250757254_v1.0.0.resx">
       <DependentUpon>201607250757254_v1.0.0.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{b3aa8f46-2d04-4b95-8caa-0cdf88685946}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

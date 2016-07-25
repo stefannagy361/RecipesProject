@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RecipesProject.Models;
 
-namespace RecipesProject
+namespace RecipesProject.Models
 {
-	class Fridge
+	public class Ingredient
 	{
 		public int Id { get; set; }
-		public int UserId { get; set; }
-		public List<Ingredient> Ingridients { get; set; }
+		public string Name { get; set; }
+		public int FridgeId { get; set; }
 	}
 }

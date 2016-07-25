@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RecipesProject
+namespace RecipesProject.Models
 {
-	class Ingredient
+	public class Fridge
 	{
 		public int Id { get; set; }
-		public string Name { get; set; }
-		public int FridgeId { get; set; }
+		public int UserId { get; set; }
+		public List<Ingredient> Ingridients { get; set; }
 	}
 }
