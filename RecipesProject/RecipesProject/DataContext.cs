@@ -11,6 +11,7 @@ namespace RecipesProject
   {
     public DbSet<User> Users { get; set; }
     public DbSet<Fridge> Fridges { get; set; }
+    public DbSet<Product> Products { get; set; }
 
   }
 }

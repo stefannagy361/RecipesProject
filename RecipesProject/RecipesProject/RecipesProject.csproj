@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Controllers\FridgeMaker.cs" />
     <Compile Include="Controllers\LoginService.cs" />
+    <Compile Include="Controllers\ProductMaker.cs" />
     <Compile Include="Controllers\RegistrationService.cs" />
     <Compile Include="Controllers\Session.cs" />
     <Compile Include="DataContext.cs" />
@@ -62,6 +63,10 @@
     <Compile Include="Migrations\201607251422208_v.1.0.0.cs" />
     <Compile Include="Migrations\201607251422208_v.1.0.0.Designer.cs">
       <DependentUpon>201607251422208_v.1.0.0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607251448494_v.1.0.1.cs" />
+    <Compile Include="Migrations\201607251448494_v.1.0.1.Designer.cs">
+      <DependentUpon>201607251448494_v.1.0.1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Fridge.cs" />
@@ -75,6 +80,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Views\Notifications.cs" />
+    <Compile Include="Views\ProductMenu.cs" />
     <Compile Include="Views\RegisterMenu.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -87,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201607251422208_v.1.0.0.resx">
       <DependentUpon>201607251422208_v.1.0.0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607251448494_v.1.0.1.resx">
+      <DependentUpon>201607251448494_v.1.0.1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

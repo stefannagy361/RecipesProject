@@ -24,6 +24,9 @@ namespace RecipesProject
            case 3:
              FridgeMaker.AddFridge();
              break;
+           case 4:
+             ProductMenu.AddProduct();
+             break;
            case 0:
 
              break;
