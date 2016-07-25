@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,13 +28,18 @@ namespace RecipesProject
         }
         if (loginSucceeded == false)
           Notifications.InvalidUser();
-        //var Repo = new Repository<User>(context);
-        //var user = new User() { Username = username, Password = finalPassword };
-        //Repo.Add(user);
-        ////context.Users.Add(new User() { Username = username, Password = finalPassword}); old method, keep just in case :v
-        //context.SaveChanges();
       }
+    }
 
+    internal static bool LoggedIn(DataContext context)
+    {
+      bool logged = false;
+      foreach(User user in context.Users)
+      {
+        if (Session.Session_ID == user.Id)
+          logged = true;
+      }
+      return logged;
     }
   }
 }

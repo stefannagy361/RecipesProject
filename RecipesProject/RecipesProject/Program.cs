@@ -10,22 +10,28 @@ namespace RecipesProject
 	{
 		static void Main(string[] args)
 		{
+      int o=-1;
       var menu = new MenuOptions();
-     switch(MainMenu.Menu(menu))
-     {
-       case 1:
-         RegisterMenu.Register();
-         break;
-       case 2:
-         LoginMenu.Login();
-         break;
-       case 3:
+      do{
+         switch(MainMenu.Menu(menu))
+         {
+           case 1:
+             RegisterMenu.Register();
+             break;
+           case 2:
+             LoginMenu.Login();
+             break;
+           case 3:
+             FridgeMaker.AddFridge();
+             break;
+           case 0:
 
-         break;
-       default:
+             break;
+           default:
 
-         break;
-     }
+             break;
+         }
+      }while(o!=0);
 		}
 	}
 }

@@ -22,5 +22,15 @@ namespace RecipesProject
     {
       Console.WriteLine("\nLogin succesfull\n");
     }
+
+    internal static void NeedLogin()
+    {
+      Console.WriteLine("[!]You must be logged in to perform this action!");
+    }
+
+    internal static void ActionSuccessfull()
+    {
+      Console.WriteLine("The specified action was successfull. Returning to the main menu.");
+    }
   }
 }
