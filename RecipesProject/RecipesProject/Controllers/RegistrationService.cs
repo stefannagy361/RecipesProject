@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RecipesProject
 {
-  class RegistrationLogic
+  class RegistrationService
   {
     internal static void ParseRegister(string username, string password)
     {
@@ -14,7 +14,10 @@ namespace RecipesProject
       finalPassword = password.GetHashCode();
       using (var context = new DataContext())
       {
-        context.Users.Add(new User() { Username = username, Password = finalPassword});
+        var Repo = new Repository<User>(context);
+        var user = new User() { Username = username, Password = finalPassword };
+        Repo.Add(user);
+        //context.Users.Add(new User() { Username = username, Password = finalPassword}); old method, keep just in case :v
         context.SaveChanges();
       }
     }

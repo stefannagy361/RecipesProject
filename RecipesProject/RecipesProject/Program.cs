@@ -17,7 +17,7 @@ namespace RecipesProject
          RegisterMenu.Register();
          break;
        case 2:
-
+         LoginMenu.Login();
          break;
        case 3:
 

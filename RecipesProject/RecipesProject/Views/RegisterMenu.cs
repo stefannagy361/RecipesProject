@@ -10,6 +10,10 @@ namespace RecipesProject
   {
     internal static void Register()
     {
+      Console.Clear();
+      Console.WriteLine("----------------");
+      Console.WriteLine("=== Register ===");
+      Console.WriteLine("----------------");
       string username;
       string password;
       Console.Clear();
@@ -17,7 +21,7 @@ namespace RecipesProject
       username = Console.ReadLine();
       Console.WriteLine("Password: ");
       password = Console.ReadLine();
-      RegistrationLogic.ParseRegister(username, password);
+      RegistrationService.ParseRegister(username, password);
     }
   }
 }
