@@ -11,7 +11,21 @@ namespace RecipesProject
 		static void Main(string[] args)
 		{
       var menu = new MenuOptions();
-      MainMenu.MenuShow(menu);
+     switch(MainMenu.Menu(menu))
+     {
+       case 1:
+         RegisterMenu.Register();
+         break;
+       case 2:
+
+         break;
+       case 3:
+
+         break;
+       default:
+
+         break;
+     }
 		}
 	}
 }

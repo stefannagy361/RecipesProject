@@ -8,9 +8,9 @@ namespace RecipesProject
 {
   class MainMenu
   {
-    internal static int MenuShow(MenuOptions options)
+    internal static int Menu(MenuOptions options)
     {
-      int choice, output=-1;
+      int output=-1;
       bool success;
       Console.WriteLine("-----------------");
       Console.WriteLine("=== Main Menu ===");
@@ -23,8 +23,8 @@ namespace RecipesProject
       success = Int32.TryParse(Console.ReadLine(), out output);
       if (success == false || output<0 || output > options.MenuEntries.Count)
       {
-        Console.WriteLine("Invalid selection. Please try again...");
-        output = MenuShow(options);
+        Console.WriteLine("\nInvalid selection. Please try again...\n");
+        output = Menu(options);
       }
       return output;
     }

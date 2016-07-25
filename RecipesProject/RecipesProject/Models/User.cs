@@ -6,15 +6,10 @@ using System.Threading.Tasks;
 
 namespace RecipesProject
 {
-  class MenuOptions
+  class User
   {
-    public List<String> MenuEntries = new List<String>
-      {
-        "1.",
-        "2.",
-        "3."
-      };
-
-    
+    public int Id { get; set; }
+    public string Username { get; set; }
+    public int Password { get; set; }
   }
 }
