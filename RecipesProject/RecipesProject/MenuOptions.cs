@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace RecipesProject
 {
-	class Program
-	{
-		static void Main(string[] args)
-		{
-      var menu = new MenuOptions();
-      MainMenu.MenuShow(menu);
-		}
-	}
+  class MenuOptions
+  {
+    public List<String> MenuEntries = new List<String>
+      {
+        "1.",
+        "2.",
+        "3."
+      };
+
+    
+  }
 }
