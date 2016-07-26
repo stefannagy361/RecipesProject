@@ -18,13 +18,20 @@ namespace RecipesProject
 				case 1:
 					{
 						Console.WriteLine("----Register-------");
+
 						Console.Write("Enter username: ");
 						string _username = Console.ReadLine();
 						Console.Write("Enter password: ");
 						string  _password = Console.ReadLine();
-						UserServices.AddUser(_username, _password);
-
-						Logincall();
+						if (!AutentificatorService.CheckforUser(_username))
+						{
+							UserServices.AddUser(_username, _password);
+							goto case 2;
+						}
+						else
+							
+						{Console.WriteLine("Name already in database! Chose another name");
+							goto case 1;}
 						break;
 					}
 				case 2:

@@ -9,8 +9,9 @@ namespace RecipesProject.Models
 {
 	public class Recipe
 	{
-		//public int Id { get; set; };
+		public int Id { get; set; }
 		public string Name { get; set; }
-		public List<String> Ingredients {get;set;}
+		public string Ingredients {get;set;}
+		public int PublisherId {get; set;}
 	}
 }
