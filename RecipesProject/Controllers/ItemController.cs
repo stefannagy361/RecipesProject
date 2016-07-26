@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using RecipesProject.Models;
 using RecipesProject.Views;
+using RecipesProject.Models;
 
 namespace RecipesProject.Controllers
 {
@@ -19,6 +19,7 @@ namespace RecipesProject.Controllers
 			string name;
 			Console.Write("Item name: ");
 			name = Console.ReadLine();
+			name = name.ToLower();
 
 			_context.Items.Add(new Item()
 			{

@@ -8,7 +8,7 @@ namespace RecipesProject.Views
 {
 	public class MenuView
 	{
-		internal static int ShowMenu(List<string> menuList)
+		public static int ShowMenu(List<string> menuList)
 		{
 			for (int i = 0; i < menuList.Count; i++)
 				Console.WriteLine("{0}. {1}", i + 1, menuList[i]);

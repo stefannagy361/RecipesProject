@@ -4,8 +4,8 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using RecipesProject.Models;
 using RecipesProject.Views;
+using RecipesProject.Models;
 
 namespace RecipesProject.Controllers
 {

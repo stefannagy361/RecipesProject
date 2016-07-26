@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using RecipesProject.Models;
 using RecipesProject.Views;
 
 namespace RecipesProject.Controllers
@@ -11,7 +10,7 @@ namespace RecipesProject.Controllers
 	public class MenuController
 	{
 
-		internal static void LoginMenu(List<string> menuList)
+		public static void LoginMenu(List<string> menuList)
 		{
 			int index = MenuView.ShowMenu(menuList);
 			switch (index)
@@ -34,7 +33,7 @@ namespace RecipesProject.Controllers
 			}
 		}
 
-		internal static void ItemMenu(List<string> menuList)
+		public static void ItemMenu(List<string> menuList)
 		{
 			int index = MenuView.ShowMenu(menuList);
 

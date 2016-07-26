@@ -15,8 +15,6 @@ namespace RecipesProject.Controllers
 
 		internal static void FindRecipes()
 		{
-			AddRecipes();
-
 			IEnumerable<string> items = _context.Items
 				.Where(i => i.Owner_Id == ItemController.Owner.Id)
 				.Select(i => i.Name);
@@ -33,7 +31,7 @@ namespace RecipesProject.Controllers
 				Messages.Show("\t", "Nothing");
 		}
 
-		private static void AddRecipes()
+		public static void AddRecipes()
 		{
 			recipeList.Add(new Recipe()
 			{
