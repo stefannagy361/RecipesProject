@@ -36,7 +36,8 @@ namespace RecipesProject.Views
 						break;
 					}
 				case 2:
-					{	
+					{
+						Console.Clear();
 						Logincall();
 						break;
 					}
@@ -50,7 +51,7 @@ namespace RecipesProject.Views
 
 		public static void Logincall()
 		{
-			Console.Clear();
+			
 			Console.WriteLine("-------Login------");
 			Console.Write("Enter username: ");
 			string _username = Console.ReadLine();
@@ -65,6 +66,7 @@ namespace RecipesProject.Views
 		}
 			else
 				Console.WriteLine("Invalid name or password!");
+			Logincall();
 		}
 	
 	}

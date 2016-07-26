@@ -48,7 +48,9 @@ namespace RecipesProject.Views
 							string _recpeName = Console.ReadLine();
 							Console.Write("Enter Ingredients separated by comas: ");
 							string _ingridients = Console.ReadLine();
-							RecipeService.AddRecipe(_recpeName, _ingridients);
+							Console.Write("Enter Instructions : ");
+							string _instructions = Console.ReadLine();
+							RecipeService.AddRecipe(_recpeName, _ingridients, _instructions);
 							break;
 						}
 					case 4:
@@ -59,6 +61,7 @@ namespace RecipesProject.Views
 							{
 								Console.WriteLine("\t"+rec.Name.ToUpper());
 								Console.WriteLine("Ingridients:"+rec.Ingredients + "\n");
+								Console.WriteLine("Instructions:" + rec.Instructions + "\n");
 							}
 							break;
 						}

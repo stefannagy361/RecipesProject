@@ -9,11 +9,11 @@ namespace RecipesProject.Controlers
 {
 	public class RecipeService
 	{
-		public static void AddRecipe(string _recName, string _ingreds)
+		public static void AddRecipe(string _recName, string _ingreds, string _instruct)
 		{
 				using (var _context = new RecipesProjectContext())
 			{
-				var _recipe = new Recipe() { Name = _recName, Ingredients = _ingreds, PublisherId = AutentificatorService._Session };
+				var _recipe = new Recipe() { Name = _recName, Ingredients = _ingreds, Instructions = _instruct, PublisherId = AutentificatorService._Session };
 				DataAcces.Add<Recipe>(_recipe, _context, _context.Recipes);
 			};
 		}

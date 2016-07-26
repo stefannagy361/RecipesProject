@@ -15,12 +15,12 @@ namespace RecipesProject.Controlers
 			{
 				var _user = new User() { Name = _name, Password = _password.GetHashCode() };
 				DataAcces.Add<User>(_user, _context, _context.Users);
-				var _fridge = new Fridge(){UserId = FindUserId(_name,_password)};
-				DataAcces.Add<Fridge>(_fridge, _context, _context.Fridges);
-
-
+				var _UserId = FindUserId(_name, _password);
+				FridgeService.AddFridge(_UserId);
+			};
+				
 			}
-		}
+	
 		public static void ViewAll()
 		{
 			using (var _context = new RecipesProjectContext())

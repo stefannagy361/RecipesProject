@@ -24,7 +24,7 @@ namespace RecipesProject.Controlers
 				var userslist = DataAcces.GetAll<User>(_context, _context.Users);
 				foreach (var _user in userslist)
 				{
-					if ((_username == _user.Name))
+					if (_username == _user.Name)
 					{
 						_output=true;
 						break;

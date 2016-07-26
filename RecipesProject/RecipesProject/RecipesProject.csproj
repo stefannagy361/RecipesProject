@@ -58,6 +58,14 @@
     <Compile Include="Migrations\201607260601366_v1.0.1.Designer.cs">
       <DependentUpon>201607260601366_v1.0.1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201607260935173_v.1.0.3.cs" />
+    <Compile Include="Migrations\201607260935173_v.1.0.3.Designer.cs">
+      <DependentUpon>201607260935173_v.1.0.3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607261038066_v1.0.5.cs" />
+    <Compile Include="Migrations\201607261038066_v1.0.5.Designer.cs">
+      <DependentUpon>201607261038066_v1.0.5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -88,6 +96,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201607260601366_v1.0.1.resx">
       <DependentUpon>201607260601366_v1.0.1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607260935173_v.1.0.3.resx">
+      <DependentUpon>201607260935173_v.1.0.3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607261038066_v1.0.5.resx">
+      <DependentUpon>201607261038066_v1.0.5.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
