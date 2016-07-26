@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using System.Data.Entity;
 using RecipesProject.Models;
 
-namespace RecipesProject
+namespace RecipesProject.Models
 {
-	class RecipesProjectContext : DbContext
+public	class RecipesProjectContext : DbContext
 	{
 		public DbSet<Ingredient> Ingredients { get; set; }
 		public DbSet<Fridge> Fridges { get; set; }

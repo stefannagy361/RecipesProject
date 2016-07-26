@@ -5,14 +5,14 @@ namespace RecipesProject.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<RecipesProject.RecipesProjectContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<RecipesProject.Models.RecipesProjectContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(RecipesProject.RecipesProjectContext context)
+        protected override void Seed(RecipesProject.Models.RecipesProjectContext context)
         {
             //  This method will be called after migrating to the latest version.
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using RecipesProject.Models;
 using System.Data.Entity;
 
-namespace RecipesProject
+namespace RecipesProject.Controlers
 {
 	public class FridgeService
 	{

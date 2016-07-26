@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FF048DE3-29C6-422A-A6A8-74F1375BEDFB}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{FC868986-F6D1-4435-8A5E-B12D32BE84BE}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RecipesProject</RootNamespace>
-    <AssemblyName>RecipesProject</AssemblyName>
+    <RootNamespace>Views</RootNamespace>
+    <AssemblyName>Views</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -50,23 +48,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201607250757254_v1.0.0.cs" />
-    <Compile Include="Migrations\201607250757254_v1.0.0.Designer.cs">
-      <DependentUpon>201607250757254_v1.0.0.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201607260601366_v1.0.1.cs" />
-    <Compile Include="Migrations\201607260601366_v1.0.1.Designer.cs">
-      <DependentUpon>201607260601366_v1.0.1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="LoggedUserMenu.cs" />
+    <Compile Include="MenuView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
+    <Compile Include="UserMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Controlers\Controlers.csproj">
@@ -77,18 +62,10 @@
       <Project>{b3aa8f46-2d04-4b95-8caa-0cdf88685946}</Project>
       <Name>Models</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Views\Views.csproj">
-      <Project>{fc868986-f6d1-4435-8a5e-b12d32be84be}</Project>
-      <Name>Views</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201607250757254_v1.0.0.resx">
-      <DependentUpon>201607250757254_v1.0.0.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201607260601366_v1.0.1.resx">
-      <DependentUpon>201607260601366_v1.0.1.cs</DependentUpon>
-    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

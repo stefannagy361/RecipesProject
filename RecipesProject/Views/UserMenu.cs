@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using RecipesProject.Models;
 using System.Data.Entity;
+using RecipesProject.Controlers;
 
-namespace RecipesProject
+namespace RecipesProject.Views
 {
-	class UserMenu
+	public class UserMenu
 	{
 		public static void ShowUserMenu()
 		{

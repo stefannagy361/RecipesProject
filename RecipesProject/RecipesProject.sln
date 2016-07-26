@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipesProject", "RecipesPr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{B3AA8F46-2D04-4B95-8CAA-0CDF88685946}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controlers", "Controlers\Controlers.csproj", "{91A84DF3-9EE6-4F90-8EF0-92CABDAF4BB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Views", "Views\Views.csproj", "{FC868986-F6D1-4435-8A5E-B12D32BE84BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{B3AA8F46-2D04-4B95-8CAA-0CDF88685946}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3AA8F46-2D04-4B95-8CAA-0CDF88685946}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3AA8F46-2D04-4B95-8CAA-0CDF88685946}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91A84DF3-9EE6-4F90-8EF0-92CABDAF4BB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91A84DF3-9EE6-4F90-8EF0-92CABDAF4BB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91A84DF3-9EE6-4F90-8EF0-92CABDAF4BB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91A84DF3-9EE6-4F90-8EF0-92CABDAF4BB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC868986-F6D1-4435-8A5E-B12D32BE84BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC868986-F6D1-4435-8A5E-B12D32BE84BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC868986-F6D1-4435-8A5E-B12D32BE84BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC868986-F6D1-4435-8A5E-B12D32BE84BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
