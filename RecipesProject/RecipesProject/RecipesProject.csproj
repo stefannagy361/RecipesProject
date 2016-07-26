@@ -56,17 +56,17 @@
     <Compile Include="Controllers\RegistrationService.cs" />
     <Compile Include="Controllers\Session.cs" />
     <Compile Include="DataContext.cs" />
-    <Compile Include="Migrations\201607250953049_InitialCreate.cs" />
-    <Compile Include="Migrations\201607250953049_InitialCreate.Designer.cs">
-      <DependentUpon>201607250953049_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201607260651549_InitialCreate.cs" />
+    <Compile Include="Migrations\201607260651549_InitialCreate.Designer.cs">
+      <DependentUpon>201607260651549_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201607251422208_v.1.0.0.cs" />
-    <Compile Include="Migrations\201607251422208_v.1.0.0.Designer.cs">
-      <DependentUpon>201607251422208_v.1.0.0.cs</DependentUpon>
+    <Compile Include="Migrations\201607260711141_v.1.0.3.cs" />
+    <Compile Include="Migrations\201607260711141_v.1.0.3.Designer.cs">
+      <DependentUpon>201607260711141_v.1.0.3.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201607251448494_v.1.0.1.cs" />
-    <Compile Include="Migrations\201607251448494_v.1.0.1.Designer.cs">
-      <DependentUpon>201607251448494_v.1.0.1.cs</DependentUpon>
+    <Compile Include="Migrations\201607260724452_v.1.0.4.cs" />
+    <Compile Include="Migrations\201607260724452_v.1.0.4.Designer.cs">
+      <DependentUpon>201607260724452_v.1.0.4.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Fridge.cs" />
@@ -88,14 +88,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201607250953049_InitialCreate.resx">
-      <DependentUpon>201607250953049_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201607260651549_InitialCreate.resx">
+      <DependentUpon>201607260651549_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201607251422208_v.1.0.0.resx">
-      <DependentUpon>201607251422208_v.1.0.0.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201607260711141_v.1.0.3.resx">
+      <DependentUpon>201607260711141_v.1.0.3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201607251448494_v.1.0.1.resx">
-      <DependentUpon>201607251448494_v.1.0.1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201607260724452_v.1.0.4.resx">
+      <DependentUpon>201607260724452_v.1.0.4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

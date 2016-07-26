@@ -23,7 +23,8 @@ namespace RecipesProject
               fridgeId = fridge.ID;
             }
           }
-          var product = new Product() { Fridge_ID = fridgeId, Name = name };
+          var product = new Product() { FridgeId = fridgeId, Name = name };
+          Repo.Add(product);
           context.SaveChanges();
           Notifications.ActionSuccessfull();
         }

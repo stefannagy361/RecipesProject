@@ -10,6 +10,9 @@ namespace RecipesProject
   {
     public int ID { get; set; }
     public string Name { get; set; }
-    public int Fridge_ID { get; set; } //Foreign-key FK
+
+    public int FridgeId { get; set; } //FK
+    public virtual Fridge Fridge { get;set; }
+
   }
 }

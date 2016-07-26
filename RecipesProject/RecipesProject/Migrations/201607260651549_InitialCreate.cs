@@ -3,7 +3,7 @@ namespace RecipesProject.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class v100 : DbMigration
+    public partial class InitialCreate : DbMigration
     {
         public override void Up()
         {
@@ -22,19 +22,29 @@ namespace RecipesProject.Migrations
                     {
                         ID = c.Int(nullable: false, identity: true),
                         Name = c.String(),
-                        Fridge_ID = c.Int(nullable: false),
-                        Fridge_ID1 = c.Int(),
+                        FridgeId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.ID)
-                .ForeignKey("dbo.Fridges", t => t.Fridge_ID1)
-                .Index(t => t.Fridge_ID1);
+                .ForeignKey("dbo.Fridges", t => t.FridgeId, cascadeDelete: true)
+                .Index(t => t.FridgeId);
+            
+            CreateTable(
+                "dbo.Users",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Username = c.String(),
+                        Password = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
             
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Products", "Fridge_ID1", "dbo.Fridges");
-            DropIndex("dbo.Products", new[] { "Fridge_ID1" });
+            DropForeignKey("dbo.Products", "FridgeId", "dbo.Fridges");
+            DropIndex("dbo.Products", new[] { "FridgeId" });
+            DropTable("dbo.Users");
             DropTable("dbo.Products");
             DropTable("dbo.Fridges");
         }
