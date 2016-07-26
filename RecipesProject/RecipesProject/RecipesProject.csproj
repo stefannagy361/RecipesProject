@@ -54,6 +54,7 @@
     <Compile Include="Controllers\LoginService.cs" />
     <Compile Include="Controllers\ProductDropper.cs" />
     <Compile Include="Controllers\ProductMaker.cs" />
+    <Compile Include="Controllers\RecipeMaker.cs" />
     <Compile Include="Controllers\RegistrationService.cs" />
     <Compile Include="Controllers\Session.cs" />
     <Compile Include="DataContext.cs" />
@@ -69,10 +70,15 @@
     <Compile Include="Migrations\201607260724452_v.1.0.4.Designer.cs">
       <DependentUpon>201607260724452_v.1.0.4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201607261134343_v.1.0.5.cs" />
+    <Compile Include="Migrations\201607261134343_v.1.0.5.Designer.cs">
+      <DependentUpon>201607261134343_v.1.0.5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Fridge.cs" />
     <Compile Include="Models\IRepository.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Recipe.cs" />
     <Compile Include="Models\Repository.cs" />
     <Compile Include="Views\ItemShow.cs" />
     <Compile Include="Views\LoginMenu.cs" />
@@ -83,6 +89,7 @@
     <Compile Include="Models\User.cs" />
     <Compile Include="Views\Notifications.cs" />
     <Compile Include="Views\ProductMenu.cs" />
+    <Compile Include="Views\RecipeMenu.cs" />
     <Compile Include="Views\RegisterMenu.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -98,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201607260724452_v.1.0.4.resx">
       <DependentUpon>201607260724452_v.1.0.4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607261134343_v.1.0.5.resx">
+      <DependentUpon>201607261134343_v.1.0.5.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
