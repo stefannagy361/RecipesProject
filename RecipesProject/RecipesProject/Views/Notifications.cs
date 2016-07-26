@@ -32,5 +32,10 @@ namespace RecipesProject
     {
       Console.WriteLine("The specified action was successfull. Returning to the main menu.");
     }
+
+    internal static void ProductNotFound()
+    {
+      Console.WriteLine("[!]The specified product could not be found in the database.");
+    }
   }
 }

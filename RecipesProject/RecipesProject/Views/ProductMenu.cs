@@ -27,5 +27,25 @@ namespace RecipesProject
           Notifications.NeedLogin();
       }
     }
+
+    internal static void RemoveProduct()
+    {
+      string name;
+      Console.Clear();
+      using (var context = new DataContext())
+      {
+        if (LoginService.LoggedIn(context))
+        {
+          Console.WriteLine("-------------------");
+          Console.WriteLine("=== Remove item ===");
+          Console.WriteLine("-------------------");
+          Console.WriteLine("Please type the name of the product: ");
+          name = Console.ReadLine();
+          ProductDropper.RemoveProduct(name);
+        }
+        else
+          Notifications.NeedLogin();
+      }
+    }
   }
 }

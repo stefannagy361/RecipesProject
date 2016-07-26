@@ -27,6 +27,12 @@ namespace RecipesProject
            case 4:
              ProductMenu.AddProduct();
              break;
+           case 5:
+             ProductMenu.RemoveProduct();
+             break;
+           case 6:
+             ItemShow.ShowItems();
+             break;
            case 0:
 
              break;

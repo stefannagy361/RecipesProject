@@ -13,7 +13,9 @@ namespace RecipesProject
         "1. Register",
         "2. Login",
         "3. Add fridge",
-        "4. Add product"
+        "4. Add product",
+        "5. Remove product",
+        "6. Show products"
       };
 
     

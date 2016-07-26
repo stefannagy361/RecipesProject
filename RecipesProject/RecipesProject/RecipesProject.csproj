@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Controllers\FridgeMaker.cs" />
     <Compile Include="Controllers\LoginService.cs" />
+    <Compile Include="Controllers\ProductDropper.cs" />
     <Compile Include="Controllers\ProductMaker.cs" />
     <Compile Include="Controllers\RegistrationService.cs" />
     <Compile Include="Controllers\Session.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Models\IRepository.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Repository.cs" />
+    <Compile Include="Views\ItemShow.cs" />
     <Compile Include="Views\LoginMenu.cs" />
     <Compile Include="Views\MainMenu.cs" />
     <Compile Include="Views\MenuOptions.cs" />
