@@ -18,7 +18,10 @@ namespace RecipesProject.Views
 
 			int output = -1;
 			if (!int.TryParse(Console.ReadLine(), out output) || (output < 1 || output > _choiceList.Count))
+			{
+				Console.WriteLine("Invalid choice! Try again please");
 				output = DisplayMenu(_choiceList);
+			}
 
 			return output;
 		}

@@ -1,10 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RecipesProject.Models;
-using System.Data.Entity;
 using RecipesProject.Controlers;
 
 namespace RecipesProject.Views
@@ -13,45 +8,48 @@ namespace RecipesProject.Views
 	{
 		public static void ShowUserMenu()
 		{
-			var _userChoice =  MenuView.DisplayMenu(new List<string> { "Register", "Login", "Exit" });
-			switch(_userChoice)
+			
+			var _userChoice = MenuView.DisplayMenu(new List<string> { "Register", "Login", "Exit" });
+			if (_userChoice == 1)
 			{
-				case 1:
-					{
-						Console.WriteLine("----Register-------");
+				RegisterUser();
+				LoginUser();
+			}
 
-						Console.Write("Enter username: ");
-						string _username = Console.ReadLine();
-						Console.Write("Enter password: ");
-						string  _password = Console.ReadLine();
-						if (!AutentificatorService.CheckforUser(_username))
-						{
-							UserServices.AddUser(_username, _password);
-							goto case 2;
-						}
-						else
-							
-						{Console.WriteLine("Name already in database! Chose another name");
-							goto case 1;}
-						break;
-					}
-				case 2:
-					{
-						Console.Clear();
-						Logincall();
-						break;
-					}
-				case 3:
-					{
-						Console.Write("APLICATION IS CLOSING: ");
-						break;
-					}
+			if (_userChoice == 2)
+			{
+				Console.Clear();
+				LoginUser();
+			}
+
+			if (_userChoice == 3)
+			{
+				Environment.Exit(0);
+			}
+		}
+			
+		private static void RegisterUser()
+		{		
+			Console.Clear();
+			Console.WriteLine("----Register-------");
+
+			Console.Write("Enter username: ");
+			string _username = Console.ReadLine();
+			Console.Write("Enter password: ");
+			string _password = Console.ReadLine();
+			if (!AutentificatorService.CheckforUser(_username))
+			{
+				UserServices.AddUser(_username, _password);
+			}
+			else
+			{
+				Console.WriteLine("Name already in database! Chose another name");
 			}
 		}
 
-		public static void Logincall()
+		private static void LoginUser()
 		{
-			
+
 			Console.WriteLine("-------Login------");
 			Console.Write("Enter username: ");
 			string _username = Console.ReadLine();
@@ -61,12 +59,15 @@ namespace RecipesProject.Views
 			var _userId = UserServices.FindUserId(_username, _password);
 			if (_userId != -1)
 			{
-				AutentificatorService._Session= _userId;
+				AutentificatorService._Session = _userId;
 				LoggedUserMenu.ShowLoggedMenu();
-		}
+			}
 			else
+			{
+				Console.Clear();
 				Console.WriteLine("Invalid name or password!");
-			Logincall();
+				LoginUser();
+			}
 		}
 	
 	}

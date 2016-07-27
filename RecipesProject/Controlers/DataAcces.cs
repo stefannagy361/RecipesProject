@@ -8,7 +8,7 @@ using System.Data.Entity;
 
 namespace RecipesProject.Controlers
 {
-	public class DataAcces
+	public class DataAcces : IDisposable
 	{
 		public static void Add<T>(T parameter, DbContext context,  DbSet set)
 		{
@@ -34,6 +34,10 @@ namespace RecipesProject.Controlers
 			TheList.Add(elem);
 			
 			return TheList;
+		}
+		public void  Dispose()
+		{
+			this.Dispose();
 		}
 	}
 }

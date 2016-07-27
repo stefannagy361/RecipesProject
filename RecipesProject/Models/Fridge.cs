@@ -4,13 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 namespace RecipesProject.Models
 {
-	public class Fridge
+	public class Fridge: BaseModel
 	{
-		 [Required]
-		public int Id { get; set; }
-
 		 [Required]
 		public int UserId { get; set; }
 

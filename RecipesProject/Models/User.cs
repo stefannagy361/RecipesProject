@@ -7,9 +7,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace RecipesProject.Models
 {
-	public class User
+	public class User : BaseModel
 	{
-		public int Id { get; set; }
 		[Required]
 		public string Name { get; set; }
 		[Required]

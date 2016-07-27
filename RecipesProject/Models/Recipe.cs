@@ -8,9 +8,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace RecipesProject.Models
 {
-	public class Recipe
+	public class Recipe : BaseModel
 	{
-		public int Id { get; set; }
+		
 		[Required]
 		public string Name { get; set; }
 
