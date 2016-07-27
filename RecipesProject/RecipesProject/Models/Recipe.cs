@@ -10,6 +10,7 @@ namespace RecipesProject
   {
     public int Id { get; set; }
     public string Name { get; set; }
-    public List<Product> Items { get; set; }
+    //public IList<Product> Items { get; set; }
+    public string Items { get; set; }
   }
 }

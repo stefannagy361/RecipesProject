@@ -14,5 +14,7 @@ namespace RecipesProject
     public int FridgeId { get; set; } //FK
     public virtual Fridge Fridge { get;set; }
 
+    //public IList<Recipe> Recipes { get; set; }
+
   }
 }

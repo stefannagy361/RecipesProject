@@ -9,7 +9,7 @@ namespace RecipesProject.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
             ContextKey = "RecipesProject.DataContext";
         }
 

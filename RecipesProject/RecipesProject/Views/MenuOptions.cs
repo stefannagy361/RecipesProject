@@ -16,7 +16,8 @@ namespace RecipesProject
         "4. Add product",
         "5. Remove product",
         "6. Show products",
-        "7. Add recipe"
+        "7. Add recipe",
+        "8. Get Recipe"
       };
 
     

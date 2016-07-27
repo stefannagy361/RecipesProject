@@ -37,5 +37,10 @@ namespace RecipesProject
     {
       Console.WriteLine("[!]The specified product could not be found in the database.");
     }
+
+    internal static void NoRecipesToShow()
+    {
+      Console.WriteLine("[!]There are no recipes that can be cooked with the ingredients you currently have.");
+    }
   }
 }

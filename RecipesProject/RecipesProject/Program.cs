@@ -36,6 +36,10 @@ namespace RecipesProject
            case 7:
              RecipeMenu.ShowRecipeMenu();
              break;
+
+           case 8:
+             RecipeMenu.GetRecipe();
+             break;
            case 0:
 
              break;

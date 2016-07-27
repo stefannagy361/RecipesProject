@@ -11,7 +11,7 @@ namespace RecipesProject
     internal static void ShowRecipeMenu()
     {
       string name;
-      string ingredientName="";
+      string ingredients="";
       Console.Clear();
       using (var context = new DataContext())
       {
@@ -23,24 +23,44 @@ namespace RecipesProject
           Console.WriteLine("Please enter a name for the recipe: ");
           name = Console.ReadLine();
           var recipe = new Recipe();
-          recipe.Name = name;
-          do
-          {
-
-            Console.WriteLine("Enter the ingredients (press ENTER when you're finsihed): ");
-            ingredientName = Console.ReadLine();
-            var ingredient = new Product() { Name = ingredientName };
-            RecipeMaker.AddRecipe(recipe,ingredient);
-
-          }while(ingredientName!="");
-          var Repo = new Repository<Recipe>(context);
-          Repo.Add(recipe);
+          Console.WriteLine("Enter the ingredients (separated ONLY by a comma): ");
+          ingredients = Console.ReadLine();
+          RecipeService.AddRecipe(recipe,name,ingredients);
           Notifications.ActionSuccessfull();
           
         }
         else
           Notifications.NeedLogin();
       }
+    }
+
+    internal static void GetRecipe()
+    {
+      using (var context = new DataContext())
+      {
+        if (LoginService.LoggedIn(context))
+        {
+          Console.Clear();
+          Console.WriteLine("--------------------------");
+          Console.WriteLine("===  Possible recipes  ===");
+          Console.WriteLine("--------------------------");
+          Console.WriteLine("Here is a list of possible recipes with the items you currently have in the fridge");
+          Console.WriteLine("__________________________________________________________________________________");
+          var recipes = RecipeService.GetParameters();
+          if (recipes.Count == 0)
+            Notifications.NoRecipesToShow();
+          else
+          {
+            foreach (Recipe recipe in recipes)
+            {
+              Console.WriteLine("{0}",recipe.Name);
+            }
+          }
+        }
+        else
+          Notifications.NeedLogin();
+      }
+
     }
   }
 }
