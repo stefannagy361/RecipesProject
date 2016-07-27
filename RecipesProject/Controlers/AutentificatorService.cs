@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RecipesProject.Models;
+﻿using RecipesProject.Models;
 
 namespace RecipesProject.Controlers
 {
@@ -19,19 +14,16 @@ namespace RecipesProject.Controlers
 		public static bool CheckforUser(string _username)
 		{
 			bool _output = false;
-			using (var _context = new RecipesProjectContext())
+			var userslist = new DataAcces().GetAll<User>();
+			foreach (var _user in userslist)
 			{
-				var userslist = DataAcces.GetAll<User>(_context, _context.Users);
-				foreach (var _user in userslist)
+				if (_username == _user.Name)
 				{
-					if (_username == _user.Name)
-					{
-						_output=true;
-						break;
-					}
+					_output=true;
+					break;
 				}
-				return _output;
 			}
+			return _output;
 		}
 	}
 }

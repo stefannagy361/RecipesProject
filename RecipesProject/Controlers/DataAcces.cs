@@ -1,43 +1,50 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using RecipesProject.Models;
-using System.Data.Entity;
 
 namespace RecipesProject.Controlers
 {
 	public class DataAcces : IDisposable
 	{
-		public static void Add<T>(T parameter, DbContext context,  DbSet set)
-		{
-			
-			set.Add(parameter);	
-			context.SaveChanges();
+		RecipesProjectContext context;
+		public void Add<T>(T parameter) where T : class
+		{	
+				context.Set<T>().Add(parameter);
+				Dispose();
 		}
 
-		public static void  Remove<T>(T parameter, DbContext context, DbSet set)
+		public void  Remove<T>(T parameter) where T : class
 		{
-			set.Remove(parameter);
-			context.SaveChanges();
+			context.Set<T>().Remove(parameter);
+			Dispose();
 		}
-		public static T Get<T>(int idparam, DbContext context, DbSet set )
+
+		public T Get<T>(int idparam ) where T : class
 		{
-			var item = set.Find(idparam);
-			return (T)item;
+				var item = context.Set<T>().Find(idparam);
+				return (T)item;
+				Dispose();
 		}
-		public static List<T> GetAll<T>(DbContext context, DbSet set )
-		{	
-			var TheList = new List<T>();
-			foreach( T elem in set)			
-			TheList.Add(elem);
-			
-			return TheList;
+
+		public List<T> GetAll<T>() where T : class
+		{
+				var TheList = new List<T>();
+				foreach (T elem in context.Set<T>())
+				{
+					TheList.Add(elem);
+				}
+				return TheList;
+				Dispose();
 		}
+
 		public void  Dispose()
 		{
-			this.Dispose();
+			this.context.SaveChanges();
+		}
+
+		public DataAcces()
+		{
+			context = new RecipesProjectContext();
 		}
 	}
 }

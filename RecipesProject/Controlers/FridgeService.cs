@@ -12,33 +12,24 @@ namespace RecipesProject.Controlers
 	{
 		public static void AddFridge(int  _userid)
 		{
-			using (var _context = new RecipesProjectContext())
-			{
-				
-				DataAcces.Add<Fridge>(new Fridge(){UserId = _userid},_context,_context.Fridges);
-			}
+				new DataAcces().Add<Fridge>(new Fridge(){UserId = _userid});
 		}
 
 		public static List<Ingredient> OpenFridge(int  _userid)
 		{
-			using (var _context = new RecipesProjectContext())
-			{
-				
-				var _ingList=DataAcces.GetAll<Ingredient>(_context,_context.Ingredients);
+
+			var _ingList = new DataAcces().GetAll<Ingredient>();
 				int _fridgeId = FindId(_userid);
-				   var query = (from i in _ingList
+					var query = (from i in _ingList
 								where i.FridgeId == _fridgeId
                              select i).ToList();
 				   return query;
-			}
 		}
 			
 		public static int FindId(int _userid)
 		{
-			using (var _context = new RecipesProjectContext())
-			{
 				int _fridgeid = -1;
-				var fridgelist = DataAcces.GetAll<Fridge>(_context, _context.Fridges);
+				var fridgelist = new DataAcces().GetAll<Fridge>().ToList<Fridge>();
 				foreach (var _fridge in fridgelist)
 				{
 					if (_userid == _fridge.UserId)
@@ -48,7 +39,6 @@ namespace RecipesProject.Controlers
 					}
 				}
 				return _userid;
-			}
 		}
 	}
 }

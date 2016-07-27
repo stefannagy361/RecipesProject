@@ -9,7 +9,12 @@ namespace RecipesProject.Views
 		public static void ShowUserMenu()
 		{
 			
-			var _userChoice = MenuView.DisplayMenu(new List<string> { "Register", "Login", "Exit" });
+			var _userChoice = MenuView.DisplayMenu(new List<string> 
+			{
+				"Register",
+				"Login",
+				"Exit" 
+			});
 			if (_userChoice == 1)
 			{
 				RegisterUser();
@@ -43,7 +48,7 @@ namespace RecipesProject.Views
 			}
 			else
 			{
-				Console.WriteLine("Name already in database! Chose another name");
+			Console.WriteLine("Name already in database! Chose another name");
 			}
 		}
 

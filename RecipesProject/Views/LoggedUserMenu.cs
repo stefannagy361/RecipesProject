@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using RecipesProject.Models;
 using RecipesProject.Controlers;
 
@@ -18,7 +15,14 @@ namespace RecipesProject.Views
 			{
 				Console.Clear();
 				Console.WriteLine("-------Logged user menu--------");
-				 _userChoice = MenuView.DisplayMenu(new List<string> { "Add item to fridge", "View items in Fridge","Add Recipe", "Get Recipe", "Logout", });
+				 _userChoice = MenuView.DisplayMenu(new List<string> 
+				 {
+					 "Add item to fridge",
+					 "View items in Fridge",
+					 "Add Recipe",
+					 "Get Recipe",
+					 "Logout",
+				 });
 				
 					if(_userChoice == 1)
 					{
@@ -38,9 +42,9 @@ namespace RecipesProject.Views
 					}
 				if(_userChoice == 5)
 					{
-							Console.Clear();
-							AutentificatorService.LogOut();
-							UserMenu.ShowUserMenu();
+					Console.Clear();
+					AutentificatorService.LogOut();
+					UserMenu.ShowUserMenu();
 					}
 			}
 		}

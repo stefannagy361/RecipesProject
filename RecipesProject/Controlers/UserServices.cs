@@ -14,7 +14,8 @@ namespace RecipesProject.Controlers
 			using (var _context = new RecipesProjectContext())
 			{
 				var _user = new User() { Name = _name, Password = _password.GetHashCode() };
-				DataAcces.Add<User>(_user, _context, _context.Users);
+				var Acces = new DataAcces();
+				Acces.Add<User>(_user);
 				var _UserId = FindUserId(_name, _password);
 				FridgeService.AddFridge(_UserId);
 			};
@@ -25,7 +26,7 @@ namespace RecipesProject.Controlers
 		{
 			using (var _context = new RecipesProjectContext())
 			{
-				var userslist = DataAcces.GetAll<User>(_context, _context.Users);
+				var userslist = new DataAcces().GetAll<User>();
 				foreach (var _user in userslist)
 					Console.WriteLine(_user.Name);
 			}
@@ -35,7 +36,7 @@ namespace RecipesProject.Controlers
 			using (var _context = new RecipesProjectContext())
 			{
 				int _userid = -1;
-				var userslist = DataAcces.GetAll<User>(_context, _context.Users);
+				var userslist = new DataAcces().GetAll<User>();
 				foreach (var _user in userslist)
 				{
 					if ((_name == _user.Name) && (_pass.GetHashCode() == _user.Password))

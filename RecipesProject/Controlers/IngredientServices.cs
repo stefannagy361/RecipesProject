@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RecipesProject.Models;
-using System.Data.Entity;
+﻿using RecipesProject.Models;
 
 namespace RecipesProject.Controlers
 {
@@ -12,18 +6,18 @@ namespace RecipesProject.Controlers
 	{
 		public static void AddItem(int  _userid,string _ingridientname)
 		{
-			using (var _context = new RecipesProjectContext())
-			{
-				DataAcces.Add<Ingredient>(new Ingredient() { Name = _ingridientname, FridgeId = FridgeService.FindId(_userid) }, _context, _context.Ingredients);
-			}
+				new DataAcces().Add<Ingredient>(
+					new Ingredient() 
+					{	
+						Name = _ingridientname,
+						FridgeId = FridgeService.FindId(_userid) 
+					});
 		}
 
 		public static void removeItem(int _userid, string _ingridientname)
-		{
-			using (var _context = new RecipesProjectContext())
-			{	
-				//DataAcces.Remove<Ingredient>(, _context, _context.Fridges);
-			}
+		{	
+				//new	DataAcces().Remove<Ingredient>(, _context, _context.Fridges);
+			
 		}
 	}
 }
