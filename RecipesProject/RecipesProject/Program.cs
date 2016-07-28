@@ -41,7 +41,7 @@ namespace RecipesProject
              RecipeMenu.GetRecipe();
              break;
            case 0:
-
+             Environment.Exit(0x0);
              break;
            default:
 
